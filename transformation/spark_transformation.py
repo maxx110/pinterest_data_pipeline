@@ -19,7 +19,7 @@ os.environ["PYSPARK_SUBMIT_ARGS"] = "--packages com.amazonaws:aws-java-sdk-s3:1.
 
 class spark_transformation:
     def __init__(self):
-        self.aws_access_key_id=os.environ.get('access_keys')
+        self.aws_access_key_id=os.environ.get('access_key')
         self.aws_secret_access_key=os.environ.get('secret_key')
         self.findspark=findspark.init(os.environ["SPARK_HOME"])
         self.s3 = boto3.client("s3",aws_access_key_id=self.aws_access_key_id, aws_secret_access_key=self.aws_secret_access_key)

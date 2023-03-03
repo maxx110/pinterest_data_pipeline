@@ -53,22 +53,3 @@ if __name__ == "__main__":
             
     
 
-# data_stream_consumer.subscribe(topics=["pinterest"])
-# # Loops through all messages in the consumer and prints them out individually
-# # for message in data_stream_consumer:
-# #     print(message)
-# for message in data_stream_consumer:
-#     filename = message.value
-#     filename = filename['index']
-#     # print(filename)
-#     # file = json.dumps(message.value)
-#     tp = TemporaryFile('r+t')
-#     tp.write(json.dumps(message.value))
-#     s3.put_object(Body=tp,
-#                   Bucket='pinterestmax',
-#                   Key=f'{filename}.json')
-#     #result = s3.upload_file(tp,'pinterestmax', f'{filename}.json')
-#     #tp.close()
-#     # print(message.topic)
-#     #print(message.value)
-#     # print(message)
